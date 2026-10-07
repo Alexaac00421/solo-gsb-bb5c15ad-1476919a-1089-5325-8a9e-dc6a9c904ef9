@@ -1,0 +1,14 @@
+{
+  "formula": {
+    "name": "平均速度 v = s / t",
+    "output": "v",
+    "nodes": [
+      {"id": "v", "op": "div", "operands": ["s", "t"]}
+    ]
+  },
+  "measurements": [
+    {"id": "s", "value": 100.0, "unit": "m", "standard_uncertainty": 1.0},
+    {"id": "t", "value": 10.0, "unit": "s", "standard_uncertainty": 0.1}
+  ],
+  "covariance": []
+}

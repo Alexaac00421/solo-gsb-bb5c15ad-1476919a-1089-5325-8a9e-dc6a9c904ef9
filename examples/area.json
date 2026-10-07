@@ -1,0 +1,14 @@
+{
+  "formula": {
+    "name": "矩形面积 A = a × b",
+    "output": "A",
+    "nodes": [
+      {"id": "A", "op": "mul", "operands": ["a", "b"]}
+    ]
+  },
+  "measurements": [
+    {"id": "a", "value": 100.0, "unit": "cm", "standard_uncertainty": 0.1},
+    {"id": "b", "value": 500.0, "unit": "mm", "standard_uncertainty": 0.5}
+  ],
+  "covariance": []
+}

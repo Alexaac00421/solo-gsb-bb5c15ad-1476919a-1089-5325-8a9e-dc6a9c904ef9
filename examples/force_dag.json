@@ -1,0 +1,16 @@
+{
+  "formula": {
+    "name": "合力 F = m·a（多节点 DAG，含常量）",
+    "output": "F",
+    "nodes": [
+      {"id": "ma", "op": "mul", "operands": ["m", "a"]},
+      {"id": "F",  "op": "div", "operands": ["ma", "k"]}
+    ]
+  },
+  "measurements": [
+    {"id": "m", "value": 2.0,  "unit": "kg",     "standard_uncertainty": 0.01},
+    {"id": "a", "value": 3.0,  "unit": "m/s^2",  "standard_uncertainty": 0.02},
+    {"id": "k", "value": 1.0,  "unit": "1",      "standard_uncertainty": 0.0}
+  ],
+  "covariance": []
+}

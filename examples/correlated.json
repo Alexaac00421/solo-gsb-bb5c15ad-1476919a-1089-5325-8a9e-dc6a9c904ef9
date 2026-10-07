@@ -1,0 +1,16 @@
+{
+  "formula": {
+    "name": "y = a + b（演示测量间协方差，正完全相关）",
+    "output": "y",
+    "nodes": [
+      {"id": "y", "op": "add", "operands": ["a", "b"]}
+    ]
+  },
+  "measurements": [
+    {"id": "a", "value": 1.0, "unit": "m", "standard_uncertainty": 0.1},
+    {"id": "b", "value": 2.0, "unit": "m", "standard_uncertainty": 0.1}
+  ],
+  "covariance": [
+    {"a": "a", "b": "b", "covariance": 0.01}
+  ]
+}
