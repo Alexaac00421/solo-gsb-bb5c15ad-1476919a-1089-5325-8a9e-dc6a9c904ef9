@@ -1,0 +1,9 @@
+{
+  "name": "直流功率 P=U·I",
+  "description": "功率 = 电压 × 电流",
+  "graph": {
+    "root": { "action": "mul", "a": "voltage", "b": "current" },
+    "voltage": { "action": "leaf", "measurement_id": "U" },
+    "current": { "action": "leaf", "measurement_id": "I" }
+  }
+}

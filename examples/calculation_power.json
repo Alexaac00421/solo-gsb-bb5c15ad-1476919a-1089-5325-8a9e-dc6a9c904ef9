@@ -1,0 +1,9 @@
+{
+  "measurements": [
+    { "measurement_id": "U", "value": 10.0, "unit": "V", "std_uncertainty": 0.01 },
+    { "measurement_id": "I", "value": 1.0, "unit": "A", "std_uncertainty": 0.005 }
+  ],
+  "covariance": [
+    { "a": "U", "b": "I", "cov": 0.00002 }
+  ]
+}

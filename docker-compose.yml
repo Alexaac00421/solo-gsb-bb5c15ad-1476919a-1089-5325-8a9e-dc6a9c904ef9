@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: uncertainty
+      POSTGRES_USER: lab
+      POSTGRES_PASSWORD: labpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lab -d uncertainty"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env.example
+    environment:
+      # 服务启动时自动建表并写入幂等示例数据（SEED_DEMO=0 可关闭）
+      DATABASE_DSN: "host=db port=5432 dbname=uncertainty user=lab password=labpass"
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:
